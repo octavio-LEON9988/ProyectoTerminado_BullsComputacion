@@ -1,0 +1,98 @@
+.WhatsApp_relative {
+    position: relative;
+    z-index: 1;
+
+    .WhatsApp_boxAbsolute {
+        position: absolute;
+        width: 100%;
+        height: 55vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-right: 30px;
+
+        .WhatsApp_logoFixed {
+            position: fixed;
+            background-color: $ColorWppFondo;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+
+            &:hover {
+                background-color: $ColorWppHover;
+            }
+
+            .a_WhatsApp {
+                color: $ColorBlanco;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1045px) {
+    .WhatsApp_relative {
+        position: relative;
+        z-index: 1;
+
+        .WhatsApp_boxAbsolute {
+            position: absolute;
+            width: 100%;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+    }
+}
+@media (max-width: 745px) {
+    .WhatsApp_relative {
+        .WhatsApp_boxAbsolute {
+            height: 75vh;
+        }
+    }
+}
+
+@media (max-width: 675px) {
+    .WhatsApp_relative {
+        position: relative;
+        z-index: 1;
+
+        .WhatsApp_boxAbsolute {
+            position: absolute;
+            width: 100%;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding-right: 20px;
+
+            .WhatsApp_logoFixed {
+                position: fixed;
+                background-color: $ColorWppFondo;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+
+                .bi-whatsapp {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*@media (max-height: 675px) {
+    .WhatsApp_relative {
+        .WhatsApp_boxAbsolute {
+            height: 80vh;
+
+        } 
+    }
+}*/

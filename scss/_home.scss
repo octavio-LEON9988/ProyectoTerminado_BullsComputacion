@@ -1,0 +1,1962 @@
+@mixin CajasHome($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock) {
+    background-color: $ColorCardFondoOscuro;
+    margin-top: 30px;
+    padding: 20px 2px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+
+    h2 {
+        display: inline-block;
+        background-image: $ColorGradienteH2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+
+    .boxBoostrap_container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding-left: 150px;
+        padding-right: 150px;
+        gap: 5px;
+
+        .card {
+            background-color: $ColorCardFondo;
+            border-radius: 2%;
+            border-color: $ColorFooter_Ahover;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.2rem;
+            color: $ColorCardText;
+            width: 16rem;
+            height: 480px;
+
+            &:hover {
+                background-color: $ColorRojo;
+                border-color: $ColorA_Strong;
+                color: $ColorA_Strong;
+                transition: all 300ms ease;
+            }
+
+            .card-body {
+                h5 {
+                    .span_producto {
+                        color: $ColorCardTitulo;
+                        font-size: 1.5rem;
+                        font-family: 'Barlow', sans-serif;
+                    }
+                }
+
+                p {
+
+                    span.En_stock {
+                        color: $ColorEnStock;
+                    }
+
+                    span.Poco_stock {
+                        color: $ColorPocoStock;
+                    }
+
+                    span.Sin_stock {
+                        color: $ColorSinStock;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box_productos_destacados {
+    @include CajasHome($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+
+    .card {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.box_mas_vendidos {
+    @include CajasHome($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+    background-color: $ColorBody;
+    margin-top: auto;
+}
+
+.box_pcs_armadas {
+    @include CajasHome($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+    margin-top: auto;
+
+    .card.PcArmadas {
+        height: 505px;
+    }
+}
+
+
+
+
+
+@media (max-width: 1620px) {
+    .box_productos_destacados {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 400px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1305px) {
+    .box_productos_destacados {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 370px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1040px) {
+    .box_productos_destacados {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                height: 300px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+@media (max-width: 690px) {
+    .box_productos_destacados {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 250px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1620px) {
+    .box_mas_vendidos {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 400px;
+
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 1305px) {
+    .box_mas_vendidos {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 390px;
+
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 1040px) {
+    .box_mas_vendidos {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 300px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+@media (max-width: 690px) {
+    .box_mas_vendidos {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 250px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1620px) {
+    .box_pcs_armadas {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 430px;
+
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1305px) {
+    .box_pcs_armadas {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 390px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1040px) {
+    .box_pcs_armadas {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 320px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+@media (max-width: 690px) {
+    .box_pcs_armadas {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 260px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.marcas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .text_marcas_flex1 {
+        display: flex;
+        justify-content: center;
+        color: $ColorRojo;
+
+        p.text_marcas1 {
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Josefin Sans', sans-serif;
+            width: 75%;
+
+            strong {
+                color: $ColorA_Strong;
+            }
+        }
+
+    }
+
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+
+    .img_container_flex {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        .img_container_grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-columns: 1fr;
+            gap: 5px 5px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "HyperX AMD Intel Nvidia Razer Zowie Logitech"
+                "Redragon CoolerMaster ASUS MSI Gigabyte Samsung Corsair"
+                "Kingston Seagate Aorus Ryzen Sony WesternDigital LG";
+
+            .HyperX {
+                grid-area: HyperX;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .AMD {
+                grid-area: AMD;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Intel {
+                grid-area: Intel;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Nvidia {
+                grid-area: Nvidia;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Razer {
+                grid-area: Razer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Zowie {
+                grid-area: Zowie;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Logitech {
+                grid-area: Logitech;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Redragon {
+                grid-area: Redragon;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .CoolerMaster {
+                grid-area: CoolerMaster;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .ASUS {
+                grid-area: ASUS;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .MSI {
+                grid-area: MSI;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Gigabyte {
+                grid-area: Gigabyte;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Samsung {
+                grid-area: Samsung;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Corsair {
+                grid-area: Corsair;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Kingston {
+                grid-area: Kingston;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Seagate {
+                grid-area: Seagate;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Aorus {
+                grid-area: Aorus;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Ryzen {
+                grid-area: Ryzen;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Sony {
+                grid-area: Sony;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .WesternDigital {
+                grid-area: WesternDigital;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .LG {
+                grid-area: LG;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    .text_marcas_flex2 {
+        display: flex;
+        justify-content: center;
+        color: $ColorRojo;
+
+        p.text_marcas2 {
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Josefin Sans', sans-serif;
+            width: 75%;
+
+            strong {
+                color: $ColorA_Strong;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 1470px) {
+    section.marcas {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 30px;
+
+        .text_marcas_flex1 {
+            display: flex;
+            justify-content: center;
+            color: $ColorRojo;
+
+            p.text_marcas1 {
+                text-align: center;
+                font-size: 1.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                width: 75%;
+
+                strong {
+                    color: $ColorA_Strong;
+                }
+            }
+
+        }
+
+        .hr_body {
+            margin-left: 100px;
+            margin-right: 100px;
+            color: $ColorRojo;
+        }
+
+        .img_container_flex {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            margin-bottom: 30px;
+
+            .img_container_grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-auto-columns: 1fr;
+                gap: 2px 2px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    "HyperX AMD Intel Nvidia Razer Zowie Logitech"
+                    "Redragon CoolerMaster ASUS MSI Gigabyte Samsung Corsair"
+                    "Kingston Seagate Aorus Ryzen Sony WesternDigital LG";
+
+                .HyperX {
+                    grid-area: HyperX;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_HyperX {
+                        width: 75px;
+                    }
+                }
+
+                .AMD {
+                    grid-area: AMD;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_AMD {
+                        width: 75px;
+                    }
+                }
+
+                .Intel {
+                    grid-area: Intel;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Intel {
+                        width: 90px;
+                    }
+                }
+
+                .Nvidia {
+                    grid-area: Nvidia;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Nvidia {
+                        width: 90px;
+                    }
+                }
+
+                .Razer {
+                    grid-area: Razer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Razer {
+                        width: 90px;
+                    }
+                }
+
+                .Zowie {
+                    grid-area: Zowie;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Zowie {
+                        width: 75px;
+                    }
+                }
+
+                .Logitech {
+                    grid-area: Logitech;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Logitech {
+                        width: 90px;
+                    }
+                }
+
+                .Redragon {
+                    grid-area: Redragon;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Redragon {
+                        width: 70px;
+                    }
+                }
+
+                .CoolerMaster {
+                    grid-area: CoolerMaster;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_CoolerMaster {
+                        width: 45px;
+                    }
+                }
+
+                .ASUS {
+                    grid-area: ASUS;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_ASUS {
+                        width: 75px;
+                    }
+                }
+
+                .MSI {
+                    grid-area: MSI;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_MSI {
+                        width: 90px;
+                    }
+                }
+
+                .Gigabyte {
+                    grid-area: Gigabyte;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Gigabyte {
+                        width: 75px;
+                    }
+                }
+
+                .Samsung {
+                    grid-area: Samsung;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Samsung {
+                        width: 75px;
+                    }
+                }
+
+                .Corsair {
+                    grid-area: Corsair;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Corsair {
+                        width: 90px;
+                    }
+                }
+
+                .Kingston {
+                    grid-area: Kingston;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Kingston {
+                        width: 100px;
+                    }
+                }
+
+                .Seagate {
+                    grid-area: Seagate;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Seagate {
+                        width: 90px;
+                    }
+                }
+
+                .Aorus {
+                    grid-area: Aorus;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Aorus {
+                        width: 90px;
+                    }
+                }
+
+                .Ryzen {
+                    grid-area: Ryzen;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Ryzen {
+                        width: 65px;
+                    }
+                }
+
+                .Sony {
+                    grid-area: Sony;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_Sony {
+                        width: 90px;
+                    }
+                }
+
+                .WesternDigital {
+                    grid-area: WesternDigital;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_WesternDigital {
+                        width: 100px;
+                    }
+                }
+
+                .LG {
+                    grid-area: LG;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .Logo_LG {
+                        width: 65px;
+                    }
+                }
+            }
+        }
+
+        .text_marcas_flex2 {
+            display: flex;
+            justify-content: center;
+            color: $ColorRojo;
+
+            p.text_marcas2 {
+                text-align: center;
+                font-size: 1.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                width: 75%;
+
+                strong {
+                    color: $ColorA_Strong;
+                }
+            }
+        }
+    }
+}
+
+
+    @media (max-width: 745px) {
+        section.marcas {
+            .hr_body {
+                margin-left: 50px;
+                margin-right: 50px;
+                color: $ColorRojo;
+            }
+
+            .img_container_flex {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                .img_container_grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-auto-columns: 1fr;
+                    gap: 2px 2px;
+                    grid-auto-flow: row;
+                    grid-template-areas:
+                        "HyperX AMD Intel Nvidia"
+                        "Razer Zowie Logitech Redragon"
+                        "CoolerMaster ASUS MSI Gigabyte"
+                        "Samsung Corsair Kingston Seagate"
+                        "Aorus Ryzen Sony WesternDigital"
+                        "LG LG LG LG";
+
+                    .HyperX {
+                        grid-area: HyperX;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .AMD {
+                        grid-area: AMD;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Intel {
+                        grid-area: Intel;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Nvidia {
+                        grid-area: Nvidia;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Razer {
+                        grid-area: Razer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Zowie {
+                        grid-area: Zowie;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Logitech {
+                        grid-area: Logitech;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Redragon {
+                        grid-area: Redragon;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .CoolerMaster {
+                        grid-area: CoolerMaster;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .ASUS {
+                        grid-area: ASUS;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .MSI {
+                        grid-area: MSI;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Gigabyte {
+                        grid-area: Gigabyte;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Samsung {
+                        grid-area: Samsung;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Corsair {
+                        grid-area: Corsair;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Kingston {
+                        grid-area: Kingston;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Seagate {
+                        grid-area: Seagate;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Aorus {
+                        grid-area: Aorus;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Ryzen {
+                        grid-area: Ryzen;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Sony {
+                        grid-area: Sony;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .WesternDigital {
+                        grid-area: WesternDigital;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .LG {
+                        grid-area: LG;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 450px) {
+        section.marcas {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 30px;
+    
+            .text_marcas_flex1 {
+                display: flex;
+                justify-content: center;
+                color: $ColorRojo;
+    
+                p.text_marcas1 {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                    width: 75%;
+    
+                    strong {
+                        color: $ColorA_Strong;
+                    }
+                }
+    
+            }
+    
+            .hr_body {
+                margin-left: 50px;
+                margin-right: 50px;
+                color: $ColorRojo;
+            }
+    
+            .img_container_flex {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 10px;
+                margin-bottom: 10px;
+    
+                .img_container_grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    grid-auto-columns: 1fr;
+                    gap: 2px 2px;
+                    grid-auto-flow: row;
+                    grid-template-areas:
+                        "HyperX AMD Intel"
+                        "Nvidia Razer Zowie"
+                        "Logitech Redragon CoolerMaster"
+                        "ASUS MSI Gigabyte"
+                        "Samsung Corsair Kingston"
+                        "Seagate Aorus Ryzen"
+                        "Sony WesternDigital LG";
+    
+                    .HyperX {
+                        grid-area: HyperX;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_HyperX {
+                            width: 75px;
+                        }
+                    }
+    
+                    .AMD {
+                        grid-area: AMD;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_AMD {
+                            width: 75px;
+                        }
+                    }
+    
+                    .Intel {
+                        grid-area: Intel;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Intel {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Nvidia {
+                        grid-area: Nvidia;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Nvidia {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Razer {
+                        grid-area: Razer;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Razer {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Zowie {
+                        grid-area: Zowie;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Zowie {
+                            width: 75px;
+                        }
+                    }
+    
+                    .Logitech {
+                        grid-area: Logitech;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Logitech {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Redragon {
+                        grid-area: Redragon;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Redragon {
+                            width: 70px;
+                        }
+                    }
+    
+                    .CoolerMaster {
+                        grid-area: CoolerMaster;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_CoolerMaster {
+                            width: 45px;
+                        }
+                    }
+    
+                    .ASUS {
+                        grid-area: ASUS;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_ASUS {
+                            width: 75px;
+                        }
+                    }
+    
+                    .MSI {
+                        grid-area: MSI;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_MSI {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Gigabyte {
+                        grid-area: Gigabyte;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Gigabyte {
+                            width: 75px;
+                        }
+                    }
+    
+                    .Samsung {
+                        grid-area: Samsung;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Samsung {
+                            width: 75px;
+                        }
+                    }
+    
+                    .Corsair {
+                        grid-area: Corsair;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Corsair {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Kingston {
+                        grid-area: Kingston;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Kingston {
+                            width: 100px;
+                        }
+                    }
+    
+                    .Seagate {
+                        grid-area: Seagate;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Seagate {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Aorus {
+                        grid-area: Aorus;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Aorus {
+                            width: 90px;
+                        }
+                    }
+    
+                    .Ryzen {
+                        grid-area: Ryzen;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Ryzen {
+                            width: 65px;
+                        }
+                    }
+    
+                    .Sony {
+                        grid-area: Sony;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_Sony {
+                            width: 90px;
+                        }
+                    }
+    
+                    .WesternDigital {
+                        grid-area: WesternDigital;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_WesternDigital {
+                            width: 100px;
+                        }
+                    }
+    
+                    .LG {
+                        grid-area: LG;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        .Logo_LG {
+                            width: 65px;
+                        }
+                    }
+                }
+            }
+    
+            .text_marcas_flex2 {
+                display: flex;
+                justify-content: center;
+                color: $ColorRojo;
+    
+                p.text_marcas2 {
+                    text-align: center;
+                    font-size: 1rem;
+                    font-family: 'Josefin Sans', sans-serif;
+                    width: 75%;
+    
+                    strong {
+                        color: $ColorA_Strong;
+                    }
+                }
+            }
+        }
+    }
+    

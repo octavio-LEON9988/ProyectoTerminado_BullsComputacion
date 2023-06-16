@@ -1,0 +1,89 @@
+@mixin H2_Hr($ColorGradienteH2,$ColorRojo){
+    h2 {
+        display: inline-block;
+        background-image: $ColorGradienteH2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+}
+
+main.servicios {
+    background-color: $ColorCardFondoOscuro;
+    display: flex;
+    justify-content: center;
+    height: 350px;
+
+    section.servicios {
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding-top: 20px;
+        font-family: 'Barlow', sans-serif;
+
+        @include H2_Hr($ColorGradienteH2,$ColorRojo);
+
+        p.servicios {
+            color: $ColorRojo;
+            font-family: 'Josefin Sans', sans-serif;
+            padding: 2px 15px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media (max-width: 1212px){
+    main.servicios {
+        background-color: $ColorCardFondoOscuro;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    
+        section.servicios {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 20px;
+            font-family: 'Barlow', sans-serif;
+            max-height: 350px;
+        }
+    }
+}
+@media (max-width: 580px){
+    main.servicios {
+        background-color: $ColorCardFondoOscuro;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    
+        section.servicios {
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            padding-top: 20px;
+            font-family: 'Barlow', sans-serif;
+            max-height: 350px;
+
+            .hr_body {
+                margin-left: 50px;
+                margin-right: 50px;
+                color: $ColorRojo;
+            }
+
+            p.servicios {
+                color: $ColorRojo;
+                font-family: 'Josefin Sans', sans-serif;
+                padding: 2px 15px;
+                font-size: 1rem;
+            }
+        }
+    }
+}

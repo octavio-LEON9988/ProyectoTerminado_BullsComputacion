@@ -1,0 +1,1013 @@
+@mixin CajasProductos($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock) {
+    background-color: $ColorCardFondoOscuro;
+    margin-top: 30px;
+    padding: 20px 2px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+
+    h2 {
+        display: inline-block;
+        background-image: $ColorGradienteH2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+
+    .boxBoostrap_container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding-left: 150px;
+        padding-right: 150px;
+        gap: 5px;
+
+        .card {
+            background-color: $ColorCardFondo;
+            border-radius: 2%;
+            border-color: $ColorFooter_Ahover;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.2rem;
+            color: $ColorCardText;
+            width: 16rem;
+            height: 480px;
+
+            &:hover {
+                background-color: $ColorRojo;
+                border-color: $ColorA_Strong;
+                color: $ColorA_Strong;
+                transition: all 300ms ease;
+            }
+
+            .card-body {
+                h5 {
+                    .span_producto {
+                        color: $ColorCardTitulo;
+                        font-size: 1.5rem;
+                        font-family: 'Barlow', sans-serif;
+                    }
+                }
+
+                p {
+
+                    span.En_stock {
+                        color: $ColorEnStock;
+                    }
+
+                    span.Poco_stock {
+                        color: $ColorPocoStock;
+                    }
+
+                    span.Sin_stock {
+                        color: $ColorSinStock;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.box_productos_hardware {
+    @include CajasProductos($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+
+    .card {
+        position: relative;
+        z-index: 2;
+    }
+
+}
+
+section.box_perifericos {
+    @include CajasProductos($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+    background-color: $ColorBody;
+    margin-top: auto;
+}
+
+section.box_otros {
+    @include CajasProductos($ColorCardFondoOscuro, $ColorGradienteH2, $ColorCardFondo, $ColorFooter_Ahover, $ColorCardText, $ColorRojo, $ColorA_Strong, $ColorCardTitulo, $ColorEnStock, $ColorPocoStock, $ColorSinStock);
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1620px) {
+    section.box_productos_hardware {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 400px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1305px) {
+    section.box_productos_hardware {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 380px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1040px) {
+    section.box_productos_hardware {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                height: 320px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 690px) {
+    section.box_productos_hardware {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 250px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1620px) {
+    section.box_otros {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 400px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1305px) {
+    section.box_otros {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 380px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1040px) {
+    section.box_otros {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                height: 320px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 690px) {
+    section.box_otros {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 250px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1620px) {
+    section.box_perifericos {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 75px;
+            padding-right: 75px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 222px;
+                    width: 222px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 14rem;
+                height: 400px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: 1rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1.1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .8rem;
+                        width: 77px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1305px) {
+    section.box_perifericos {
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            padding-left: 20px;
+            padding-right: 20px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 190px;
+                    width: 190px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: 1rem;
+                color: $ColorCardText;
+                width: 12rem;
+                height: 380px;
+
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1040px) {
+    section.box_perifericos {
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 126px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .8rem;
+                color: $ColorCardText;
+                width: 8rem;
+                height: 320px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: 1rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 690px) {
+    section.box_perifericos {
+
+        h2 {
+            display: inline-block;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+
+        .boxBoostrap_container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-left: 5px;
+            padding-right: 5px;
+            gap: 5px;
+
+            .card {
+                img {
+                    height: 95px;
+                    width: 126px;
+                }
+
+                background-color: $ColorCardFondo;
+                border-radius: 2%;
+                border-color: $ColorFooter_Ahover;
+                font-family: 'Kanit',
+                sans-serif;
+                font-size: .6rem;
+                color: $ColorCardText;
+                width: 8rem;
+                max-height: 250px;
+
+                .card-body {
+                    padding-top: 5px;
+
+                    h5 {
+                        margin-bottom: 0;
+                        font-size: .8rem;
+
+                        .span_producto {
+                            color: $ColorCardTitulo;
+                            font-size: .8rem;
+                            font-family: 'Barlow', sans-serif;
+                        }
+                    }
+
+                    p {
+                        margin-bottom: 5px;
+
+                        span.En_stock {
+                            color: $ColorEnStock;
+                        }
+
+                        span.Poco_stock {
+                            color: $ColorPocoStock;
+                        }
+
+                        span.Sin_stock {
+                            color: $ColorSinStock;
+                        }
+                    }
+
+                    a.BotonComprar {
+                        font-size: .7rem;
+                        width: 70px;
+                    }
+
+                }
+            }
+        }
+
+    }
+}

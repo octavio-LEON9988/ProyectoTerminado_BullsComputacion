@@ -1,0 +1,634 @@
+body {
+    background-color: $ColorBody;
+    padding-top: 370px;
+
+    div.relative_container {
+        position: relative;
+        z-index: 20;
+
+        .fixed_container {
+            position: fixed;
+            width: 100%;
+            margin-top: -40px;
+
+            .logoYtitulo_container {
+                height: 300px;
+                width: 100%;
+                display: flex;
+                background-color: $ColorDivisores_FondoLogo;
+                display: flex;
+                justify-content: center;
+                margin-top: -350px;
+
+                .titulo1 {
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 4rem;
+                    display: flex;
+                    align-items: center;
+                    color: $ColorRojoTitulo;
+                    text-decoration: underline;
+                }
+
+                .separador_logo {
+                    margin-top: 15px;
+                    width: 50px;
+                    height: 250px;
+                }
+
+                .titulo2 {
+                    font-family: 'Orbitron', sans-serif;
+                    font-size: 2rem;
+                    display: flex;
+                    align-items: center;
+                    color: $ColorRojoTitulo;
+                }
+            }
+        }
+    }
+
+
+
+    header {
+        #accordionFlushExample {
+            display: none;
+            background-color: $ColorNav_Ahover;
+            color: $ColorRojo;
+            .accordion-item{
+                background-color: $ColorNav_Ahover;
+                color: $ColorRojo;
+            }
+        }
+
+        height: 70px;
+        width: 100%;
+        background-color: $ColorRojo;
+        box-shadow: 0px 5px 10px $ColorNegro;
+
+        nav {
+            height: 70px;
+            width: 100%;
+
+            ul.navegador_ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5rem;
+                height: 70px;
+                width: 100%;
+                font-family: 'Bebas Neue', sans-serif;
+                gap: 10px;
+                padding: 0;
+
+                .botonhamburguesa {
+                    display: none;
+                }
+
+                li a {
+                    text-decoration: none;
+                    color: $ColorA_Strong;
+                    padding: 4px;
+                    border-bottom: 5px solid transparent;
+
+                    &:hover {
+                        border-bottom: 5px solid $ColorA_Strong;
+                        background-color: $ColorNav_Ahover;
+                        transition: all 500ms ease;
+                    }
+                }
+
+                li.box_sub_productos {
+                    .sub_productos {
+                        display: none;
+                        position: absolute;
+                        list-style: none;
+
+                        li a {
+                            text-decoration: none;
+                            color: $ColorA_Strong;
+                            padding: 4px;
+                            border-bottom: 5px solid transparent;
+                            transition: all 500ms ease;
+
+                            &:hover {
+                                border-bottom: 5px solid $ColorA_Strong;
+                                background-color: $ColorNav_Ahover;
+                                transition: all 500ms ease;
+                            }
+                        }
+                    }
+                }
+
+                li.box_sub_productos:hover>ul {
+                    display: block;
+                    background-color: $ColorRojo;
+                    padding: 5px;
+                    margin-top: 5px;
+                    text-align: center;
+                    font-size: 2.2rem;
+                }
+
+                .divisor {
+                    font-family: 'Bodoni Moda', serif;
+                    font-size: 5rem;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    height: 92px;
+                    color: $ColorDivisores_FondoLogo;
+                }
+            }
+        }
+    }
+
+
+    footer {
+        background-color: $ColorFooter_Ahover;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .section_footer {
+            width: 75%;
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            margin-top: 80px;
+
+            .footer_text {
+                color: $ColorBlanco;
+                font-family: 'Barlow', sans-serif;
+                display: flex;
+                flex-direction: row;
+                width: 50%;
+
+                .icon_footer {
+                    display: flex;
+                    align-items: center;
+                    color: $ColorBody;
+                }
+
+                p.p_padding {
+                    padding-left: 20px;
+                    padding-top: 30px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 1045px) {
+    body {
+        padding-top: 270px;
+
+        div.relative_container {
+            position: relative;
+            z-index: 20;
+
+            .fixed_container {
+                position: fixed;
+                width: 100%;
+                margin-top: -40px;
+
+                .logoYtitulo_container {
+                    height: 200px;
+                    width: 100%;
+                    display: flex;
+                    background-color: $ColorDivisores_FondoLogo;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -250px;
+
+                    .logo {
+                        width: 200px;
+                        height: 200px;
+
+                        img {
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+
+
+                    .titulo1 {
+                        font-family: 'Orbitron', sans-serif;
+                        font-size: 3rem;
+                        display: flex;
+                        align-items: center;
+                        color: $ColorRojoTitulo;
+                        text-decoration: underline;
+                    }
+
+                    .separador_logo {
+                        margin-top: 10px;
+                        width: 35px;
+                        height: 175px;
+                    }
+
+                    .titulo2 {
+                        font-family: 'Orbitron', sans-serif;
+                        font-size: 1.5rem;
+                        display: flex;
+                        align-items: center;
+                        color: $ColorRojoTitulo;
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@media (max-width: 905px) {
+
+    body {
+        header {
+            height: 50px;
+            width: 100%;
+            background-color: $ColorRojo;
+            box-shadow: 0px 5px 10px $ColorNegro;
+
+            nav {
+                height: 50px;
+                width: 100%;
+
+                ul.navegador_ul {
+                    list-style: none;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    font-size: 2rem;
+                    height: 50px;
+                    width: 100%;
+                    font-family: 'Bebas Neue', sans-serif;
+                    gap: 8px;
+
+                    li a {
+                        text-decoration: none;
+                        color: $ColorA_Strong;
+                        padding: 4px;
+                        border-bottom: 2.5px solid transparent;
+
+                        &:hover {
+                            border-bottom: 2.5px solid $ColorA_Strong;
+                            background-color: $ColorNav_Ahover;
+                            transition: all 500ms ease;
+                        }
+                    }
+
+                    li.box_sub_productos {
+                        .sub_productos {
+                            display: none;
+                            position: absolute;
+                            list-style: none;
+
+                            li a {
+                                text-decoration: none;
+                                color: $ColorA_Strong;
+                                padding: 2px;
+                                border-bottom: 2.5px solid transparent;
+                                transition: all 500ms ease;
+
+                                &:hover {
+                                    border-bottom: 2.5px solid $ColorA_Strong;
+                                    background-color: $ColorNav_Ahover;
+                                    transition: all 500ms ease;
+                                }
+                            }
+                        }
+                    }
+
+                    li.box_sub_productos:hover>ul {
+                        display: block;
+                        background-color: $ColorRojo;
+                        padding: 5px;
+                        margin-top: 2.5px;
+                        text-align: center;
+                        font-size: 1.7rem;
+                    }
+
+                    .divisor {
+                        font-family: 'Bodoni Moda', serif;
+                        font-size: 5rem;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        height: 68px;
+                        color: $ColorDivisores_FondoLogo;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 745px) {
+    body {
+        padding-top: 170px;
+
+        div.relative_container {
+            position: relative;
+            z-index: 20;
+
+            .fixed_container {
+                position: fixed;
+                width: 100%;
+                margin-top: -20px;
+
+                .logoYtitulo_container {
+                    height: 100px;
+                    width: 100%;
+                    display: flex;
+                    background-color: $ColorDivisores_FondoLogo;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -150px;
+
+                    .logo {
+                        width: 100px;
+                        height: 100px;
+
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+
+
+                    .titulo1 {
+                        font-family: 'Orbitron', sans-serif;
+                        font-size: 2rem;
+                        display: flex;
+                        align-items: center;
+                        color: $ColorRojoTitulo;
+                        text-decoration: underline;
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    .separador_logo {
+                        display: none;
+                    }
+
+                    .titulo2 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    header {
+
+        height: 50px;
+        width: 100%;
+        background-color: $ColorRojo;
+        box-shadow: 0px 5px 10px $ColorNegro;
+
+        
+        nav {
+            display: none;
+            height: 50px;
+            width: 100%;
+
+            ul.navegador_ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                font-size: 2rem;
+                height: 50px;
+                width: 100%;
+                font-family: 'Bebas Neue', sans-serif;
+                gap: 8px;
+
+                li a {
+                    text-decoration: none;
+                    color: $ColorA_Strong;
+                    padding: 4px;
+                    border-bottom: 2.5px solid transparent;
+
+                    &:hover {
+                        border-bottom: 2.5px solid $ColorA_Strong;
+                        background-color: $ColorNav_Ahover;
+                        transition: all 500ms ease;
+                    }
+                }
+
+                li.box_sub_productos {
+                    .sub_productos {
+                        display: none;
+                        position: absolute;
+                        list-style: none;
+
+                        li a {
+                            text-decoration: none;
+                            color: $ColorA_Strong;
+                            padding: 2px;
+                            border-bottom: 2.5px solid transparent;
+                            transition: all 500ms ease;
+
+                            &:hover {
+                                border-bottom: 2.5px solid $ColorA_Strong;
+                                background-color: $ColorNav_Ahover;
+                                transition: all 500ms ease;
+                            }
+                        }
+                    }
+                }
+
+                li.box_sub_productos:hover>ul {
+                    display: block;
+                    background-color: $ColorRojo;
+                    padding: 5px;
+                    margin-top: 2.5px;
+                    text-align: center;
+                    font-size: 1.7rem;
+                }
+
+                .divisor {
+                    font-family: 'Bodoni Moda', serif;
+                    font-size: 5rem;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    height: 68px;
+                    color: $ColorDivisores_FondoLogo;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 745px) {
+    body {
+        header {
+            #accordionFlushExample {
+                display: block;
+                background-color: $ColorRojo;
+                color: $ColorRojo;
+                .accordion-item{
+                    background-color: $ColorRojo;
+                    color: $ColorRojo;
+                    h2{
+                        background-color: $ColorRojo;
+                        color: $ColorRojo;
+                        .accordion-button{
+                            background-color:  $ColorRojo;
+                        }
+                    }
+                    .accordion-body{
+                        padding: 2px;
+                        height: 200px;
+                    }
+                }
+                nav {
+                    display: block;
+                    width: 100%;
+                    height: 200px;
+        
+                    ul.navegador_ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        font-size: 1.5rem;
+                        width: 100%;
+                        font-family: 'Bebas Neue', sans-serif;
+                        gap: 2px;
+        
+                        li a {
+                            text-decoration: none;
+                            color: $ColorA_Strong;
+                            padding: 4px;
+                            border-bottom: 2.5px solid transparent;
+        
+                            &:hover {
+                                border-bottom: 2.5px solid $ColorA_Strong;
+                                background-color: $ColorNav_Ahover;
+                                transition: all 500ms ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1045px) {
+    body {
+        footer {
+            background-color: $ColorFooter_Ahover;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .section_footer {
+                width: 75%;
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+                margin-top: 40px;
+
+                .footer_text {
+                    color: $ColorBlanco;
+                    font-family: 'Barlow', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .icon_footer {
+                        display: flex;
+                        justify-content: center;
+                        color: $ColorBody;
+                    }
+
+                    p.p_padding {
+                        padding-left: 20px;
+                        padding-top: 15px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        footer {
+            background-color: $ColorFooter_Ahover;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+
+            .section_footer {
+                width: 75%;
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+                margin-top: 40px;
+
+                .footer_text {
+                    color: $ColorBlanco;
+                    font-family: 'Barlow', sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+
+                    .icon_footer {
+                        display: flex;
+                        justify-content: center;
+                        color: $ColorBody;
+
+                        .bi {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+
+                    p.p_padding {
+                        padding-left: 20px;
+                        padding-top: 15px;
+                        display: flex;
+                        align-items: center;
+                        font-size: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

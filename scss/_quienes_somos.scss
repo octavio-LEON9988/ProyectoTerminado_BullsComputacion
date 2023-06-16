@@ -1,0 +1,115 @@
+section.quienes_somos{
+    background-color: $ColorCardFondoOscuro;
+    padding: 20px 2px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    h1{
+        text-align: center;
+        font-family: 'Barlow', sans-serif;
+        background-image: $ColorGradienteH2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+    div.flex_quienes_somos{
+        display: flex;
+        justify-content: center;
+        font-family: 'Josefin Sans', sans-serif;
+        color: $ColorRojo;
+        div.box_quienes_somos{
+            width: 50%;
+            p.quienes_somos_text{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 745px){
+    section.quienes_somos{
+        background-color: $ColorCardFondoOscuro;
+        padding: 20px 2px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        h1{
+            text-align: center;
+            font-family: 'Barlow', sans-serif;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+        div.flex_quienes_somos{
+            display: flex;
+            justify-content: center;
+            font-family: 'Josefin Sans', sans-serif;
+            color: $ColorRojo;
+            div.box_quienes_somos{
+                width: 75%;
+                p.quienes_somos_text{
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 470px){
+    section.quienes_somos{
+        background-color: $ColorCardFondoOscuro;
+        padding: 20px 2px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        h1{
+            text-align: center;
+            font-family: 'Barlow', sans-serif;
+            background-image: $ColorGradienteH2;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -moz-text-fill-color: transparent;
+        }
+        .hr_body {
+            margin-left: 50px;
+            margin-right: 50px;
+            color: $ColorRojo;
+        }
+        div.flex_quienes_somos{
+            display: flex;
+            justify-content: center;
+            font-family: 'Josefin Sans', sans-serif;
+            color: $ColorRojo;
+            div.box_quienes_somos{
+                width: 80%;
+                p.quienes_somos_text{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+}

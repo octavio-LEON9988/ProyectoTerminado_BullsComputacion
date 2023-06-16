@@ -1,0 +1,364 @@
+@mixin H2_Hr($ColorGradienteH2, $ColorRojo) {
+    h2 {
+        display: inline-block;
+        background-image: $ColorGradienteH2;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+
+    .hr_body {
+        margin-left: 100px;
+        margin-right: 100px;
+        color: $ColorRojo;
+    }
+}
+
+section.contacto_redes {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    background-color: $ColorCardFondoOscuro;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include H2_Hr($ColorGradienteH2, $ColorRojo);
+
+    .contacto_iconos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+        gap: 50px;
+
+        .iconos_contacto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $ColorFooter_Ahover;
+
+            a.iconos {
+                color: $ColorFooter_Ahover;
+
+                &:hover {
+                    color: $ColorA_Strong
+                }
+            }
+        }
+    }
+}
+
+
+
+section.contacto_formulario {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include H2_Hr($ColorGradienteH2, $ColorRojo);
+
+    .formularios {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding-top: 10px;
+
+        div.inputs {
+            color: $ColorFooter_Ahover;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Kanit', sans-serif;
+
+            input {
+                border-radius: 5px;
+                border-color: $ColorFooter_Ahover;
+                font-size: 20px;
+            }
+
+            .boton {
+                background-color: $ColorRojo;
+                color: $ColorA_Strong;
+                border-color: $ColorA_Strong;
+                margin-top: 20px;
+            }
+        }
+
+        div.consulta {
+            color: $ColorFooter_Ahover;
+            font-family: 'Kanit', sans-serif;
+
+            textarea {
+                border-radius: 5px;
+                border-color: $ColorFooter_Ahover;
+            }
+        }
+    }
+}
+
+
+
+section.contacto_iframe {
+    background-color: $ColorCardFondoOscuro;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @include H2_Hr($ColorGradienteH2, $ColorRojo);
+
+    .iframe_icons {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+
+        div.iframe {
+                #mapa{
+                    width: 600;
+                    height: 450px;
+                }
+        }
+
+        .icons {
+            margin-left: 20px;
+            color: $ColorRojo;
+        }
+    }
+}
+
+@media (max-width: 745px) {
+    body {
+        main {
+            section.contacto_redes {
+                .hr_body {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    color: $ColorRojo;
+                }
+
+                .contacto_iconos {
+                    gap: 10px;
+
+                    .iconos_contacto {
+                        .bi {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 745px) {
+
+    body {
+        main {
+            section.contacto_formulario {
+
+                .hr_body {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    color: $ColorRojo;
+                }
+
+                text-align: center;
+                font-family: 'Barlow',
+                sans-serif;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                .formularios {
+                    display: flex;
+                    justify-content: center;
+                    gap: 25px;
+                    padding-top: 10px;
+
+                    div.inputs {
+                        color: $ColorFooter_Ahover;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: 'Kanit', sans-serif;
+
+                        input {
+                            border-radius: 2.5px;
+                            border-color: $ColorFooter_Ahover;
+                            font-size: .8rem;
+                        }
+
+                        .boton {
+                            background-color: $ColorRojo;
+                            color: $ColorA_Strong;
+                            border-color: $ColorA_Strong;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    div.consulta {
+                        color: $ColorFooter_Ahover;
+                        font-family: 'Kanit', sans-serif;
+
+                        textarea {
+                            border-radius: 2.5px;
+                            border-color: $ColorFooter_Ahover;
+                            width: 200px;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 490px){
+    body {
+        main {
+            section.contacto_formulario {
+
+                .hr_body {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    color: $ColorRojo;
+                }
+
+                text-align: center;
+                font-family: 'Barlow',
+                sans-serif;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                .formularios {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    padding-top: 10px;
+
+                    div.inputs {
+                        color: $ColorFooter_Ahover;
+                        display: flex;
+                        flex-direction: column;
+                        font-family: 'Kanit', sans-serif;
+
+                        input {
+                            border-radius: 2.5px;
+                            border-color: $ColorFooter_Ahover;
+                            font-size: .7rem;
+                            padding-left: 2px;
+                        }
+
+                        .boton {
+                            background-color: $ColorRojo;
+                            color: $ColorA_Strong;
+                            border-color: $ColorA_Strong;
+                            margin-top: 10px;
+                        }
+                    }
+
+                    div.consulta {
+                        color: $ColorFooter_Ahover;
+                        font-family: 'Kanit', sans-serif;
+
+                        textarea {
+                            border-radius: 2.5px;
+                            border-color: $ColorFooter_Ahover;
+                            width: 200px;
+                            height: 180px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 820px) {
+    body {
+        main {
+            section.contacto_iframe {
+                background-color: $ColorCardFondoOscuro;
+                text-align: center;
+                font-family: 'Barlow', sans-serif;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                .hr_body {
+                    margin-left: 50px;
+                    margin-right: 50px;
+                    color: $ColorRojo;
+                }
+
+                .iframe_icons {
+                    display: flex;
+                    padding-top: 20px;
+                    flex-direction: column;
+
+                    div.iframe {
+                        #mapa{
+                            width: 300px;
+                            height: 225px;
+                        }
+                    }
+
+                    .icons {
+                        margin-left: 20px;
+                        color: $ColorRojo;
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        padding-top: 10px;
+
+                        .horarios {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+
+                        .ubicacion {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+
+                        .llamanos {
+                            p {
+                                font-size: .8rem;
+                            }
+                        }
+
+
+                        .bi {
+                            width: 30px;
+                            height: 30px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+}
