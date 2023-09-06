@@ -7,7 +7,7 @@ body {
         z-index: 20;
 
         .fixed_container {
-            position: fixed;
+            /*position: fixed;*/
             width: 100%;
             margin-top: -40px;
 
@@ -18,7 +18,7 @@ body {
                 background-color: $ColorDivisores_FondoLogo;
                 display: flex;
                 justify-content: center;
-                margin-top: -350px;
+                margin-top: -370px;
 
                 .titulo1 {
                     font-family: 'Orbitron', sans-serif;
@@ -84,7 +84,10 @@ body {
                 .botonhamburguesa {
                     display: none;
                 }
-
+                
+                /*svg.bi-cart3{
+                    color: #FFD600;
+                }*/
                 li a {
                     text-decoration: none;
                     color: $ColorA_Strong;
@@ -192,7 +195,7 @@ body {
             z-index: 20;
 
             .fixed_container {
-                position: fixed;
+                /*position: fixed;*/
                 width: 100%;
                 margin-top: -40px;
 
@@ -203,7 +206,7 @@ body {
                     background-color: $ColorDivisores_FondoLogo;
                     display: flex;
                     justify-content: center;
-                    margin-top: -250px;
+                    margin-top: -270px;
 
                     .logo {
                         width: 200px;
